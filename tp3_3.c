@@ -9,10 +9,13 @@
 
 int main()
 {
-
+int cant_nombres;
+printf("Agregue la cantidad de nombres que quiere ingresar: ");
+scanf("%d", &cant_nombres);
+fflush(stdin);
   char **nombres;
-  nombres = (char **)malloc(CANT_NOMBRE*sizeof(char*));
-    for (int i = 0; i < 5; i++)
+  nombres = (char **)malloc(cant_nombres*sizeof(char*));
+    for (int i = 0; i < cant_nombres; i++)
     {
     nombres[i]=(char *)malloc(MAX_LARGO*sizeof(char));   
         printf("Escriba su nombre: ");
@@ -20,7 +23,7 @@ int main()
 
     }
 
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < cant_nombres; i++)
     {
         printf("El nombre numero %d es: ", i+1);
     
